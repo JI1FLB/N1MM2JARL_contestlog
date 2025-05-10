@@ -1,15 +1,64 @@
 # READMEは現在作成中
 
 
-# N1MM2JARL_contestlog
+N1MM2JARL_contestlogツール
+====
 
-N1MM2JARL_contestlogは、N1MM Logger+が生成するADIFファイルをJARLコンテストログver.2.1のコンテストログを作成するツールです。
+# Overview
+
+N1MM2JARL_contestlogツールは、N1MM Logger+が生成するADIFファイルをJARLコンテストログver.2.1のコンテストログを作成するツールです。  
 また、このツールは、コンテストログ作成機能のほか、TurboHamlog用のCSVファイルを作成する機能などを有します。
 
-## N1MM2JARL_contestlogツールの機能
-## xxx
-## yyy
-## zzz
 
+## Description
+
+N1MM2JARL_contestlogツールは、N1MM Logger+が生成するADIFファイルをJARLコンテストログver.2.1のコンテストログを作成するツールです。  
+従来、N1MM Loger+で国内コンテストに参加する方は、コンテスト終了後に、コンテストログを提出するため、CtestwinなどのコンテストロガーにN1MM Logger+が生成するADIFファイルを読み込ませ、提出ログを作成したていたものと思います。
+このN1MM2JARL_contestlogツールは、N1MM Looger+のADIFファイルを簡単にJARLコンテストログ形式の提出ログを作成します。  
+このツールは、提出ログ作成とともに、日本でよく使われていTurboHamlogにログ情報を読み込ませるためのCSVファイルも作成します。  
+
+
+## Demo
+
+このツールの使い方は、初めて利用することを前提に示します。  
+(1)ツールの起動  
+n1mm2jarl_TkEasyGUIを起動します。  
+
+(2)サマリーシート作成  
+・サマリーシート作成   
+「サマリーシート作成」ボタンを押す。  
+ボタンを押すと【「サマリーシート作成」【JARL v.2.1用】画面が表示さます。  
+この画面上部の「ファイルの新規作成」ボタンを押します。この動作で、ツールを保存するフォルダ内に"summarysheet.txt"を作成されます。  
+・サマリーシートの記入  
+【「サマリーシート作成」【JARL v.2.1用】画面の各項目を記入する。  
+・サマリーシートの保存  
+この画面上部の「ファイルの保存」ボタンを押すことで、サマリーシートの情報が、"summarysheet.txt"に保存されます。  
+
+※：２度目以降のサマリーシート作成は、「ファイル読込」ボタンを押すことで、"summarysheet.txt"に保存されていた情報が【「サマリーシート作成」【JARL v.2.1用】画面が表示さます。  
+
+
+## Requirement
+
+１．python 3.13がインストールされているマシーンであること  
+２．実行ファイルn1mm2jarl_TkEasyGUI.exeを利用する場合には、実行ファイルがWindows11 x64環境でpyinstallで実行ファイルを作成しているために、
+## Usage
+
+
+## Install
+
+このツールのインストール方法は、2つの方法があります。  
+一つ目は、実行ファイルn1mm2jarl_TkEasyGUI.exeを任意のフォルダにコピーし、実行することができます。  
+二つ目は、xxx.pyファイルを任意のフォルダにコピーし、python 3.13がインストールされていれば、pythonのインタプリタで実行することができます。  
+
+
+## Contribution
+
+## Licence
+
+[MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
+
+## Author
+
+Seiichi Tanaka JI1FLB
 
 
