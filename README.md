@@ -1,5 +1,6 @@
-# READMEは現在作成中
+# READMEは現在作成中  
 
+重要なことは、N1MMlogger+でExportされるADIFファイルをpyファイル、exeファイルと同じフォルダに保存して、ツールを起動することです。
 
 N1MM2JARL_contestlogツール
 ====
@@ -7,7 +8,11 @@ N1MM2JARL_contestlogツール
 # Overview
 
 N1MM2JARL_contestlogツールは、N1MM Logger+が生成するADIFファイルをJARLコンテストログver.2.1のコンテストログを作成するツールです。  
-また、このツールは、コンテストログ作成機能のほか、TurboHamlog用のCSVファイルを作成する機能などを有します。![1.jpg](/image/1.jpg)
+また、このツールは、コンテストログ作成機能のほか、TurboHamlog用のCSVファイルを作成する機能などを有します。  
+  
+![図1](/image/1.jpg)   
+
+![図2](/image/2.jpg)
 
 
 ## Description
