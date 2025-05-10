@@ -33,6 +33,14 @@ callsign_score.txt : コンテストの集計結果、バンド別のQSO状況�
 
 ## Demo
 
+## Requirement
+
+１．python 3.13がインストールされているマシーンであること  
+２．実行ファイルn1mm2jarl_TkEasyGUI.exeを利用する場合には、実行ファイルがWindows11 x64環境でpyinstallで実行ファイルを作成しているために、  
+
+
+## Usage
+
 このツールの使い方は、初めて利用することを前提に示します。  
 (1)ツールの起動  
 n1mm2jarl_TkEasyGUIを起動します。  
@@ -65,12 +73,6 @@ d)
 a) コールサインと局種係数はサマリーシートとから自動的に転記されます。  
 b) UTC  
 
-
-## Requirement
-
-１．python 3.13がインストールされているマシーンであること  
-２．実行ファイルn1mm2jarl_TkEasyGUI.exeを利用する場合には、実行ファイルがWindows11 x64環境でpyinstallで実行ファイルを作成しているために、
-## Usage
 
 
 ## Install
