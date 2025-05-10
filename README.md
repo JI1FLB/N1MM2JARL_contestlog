@@ -8,7 +8,7 @@ N1MM2JARL_contestlogツール
 # Overview
 
 N1MM2JARL_contestlogツールは、N1MM Logger+が生成するADIFファイルをJARLコンテストログver.2.1のコンテストログを作成するツールです。  
-また、このツールは、コンテストログ作成機能のほか、TurboHamlog用のCSVファイルを作成する機能などを有します。  
+また、このツールは、提出用コンテストログ作成機能のほか、TurboHamlog用のCSVファイルを作成する機能などを有します。  
   
 !["図1"](/image/1.jpg)   
 
