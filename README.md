@@ -10,10 +10,11 @@ N1MM2JARL_contestlogツール
 N1MM2JARL_contestlogツールは、N1MM Logger+が生成するADIFファイルをJARLコンテストログver.2.1のコンテストログを作成するツールです。  
 また、このツールは、コンテストログ作成機能のほか、TurboHamlog用のCSVファイルを作成する機能などを有します。  
   
-![図1](/image/1.jpg)   
+!["図1"](/image/1.jpg)   
 
-![図2](/image/2.jpg)
+!["図2"](/image/2.jpg)
 
+!["図3"](/image/3.jpg)
 
 ## Description
 
@@ -22,10 +23,10 @@ N1MM2JARL_contestlogツールは、N1MM Logger+が生成するADIFファイル�
 このN1MM2JARL_contestlogツールは、N1MM Looger+のADIFファイル callsign.adiを簡単にJARLコンテストログ形式の提出ログを作成します。  
 このツールは、日本でよく使われていTurboHamlogにログ情報を読み込ませるためのCSVファイルも作成します。  
 このツールは、以下のものを作成する機能を有します。  
-  callsign.txt  : 提出用コンテストログファイル　　
-  callsign.csv  : Turbo Hamlog用のCSVファイル
-  callsign_score.txt : コンテストの集計結果、バンド別のQSO状況、バンド別のマルチ獲得状況　　
-
+callsign.txt  : 提出用コンテストログファイル  
+callsign.csv  : Turbo Hamlog用のCSVファイル  
+callsign_score.txt : コンテストの集計結果、バンド別のQSO状況、バンド別のマルチ獲得状況  
+  
 <ins>※：callsing.*のコールサインは、サマリーシート作成作成時に入力したコールサインです。　　
 重要： N1MM logger+で生成したADIFファイル名のコールサインとこのコールサインが異なるとエラーとなります</ins>  
   
