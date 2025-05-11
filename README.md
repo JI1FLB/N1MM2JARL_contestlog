@@ -5,6 +5,22 @@
 
 # N1MM2JARL_contestlogツール
 ---
+## index
+- [READMEは現在作成中](#readmeは現在作成中)
+- [N1MM2JARL\_contestlogツール](#n1mm2jarl_contestlogツール)
+  - [index](#index)
+  - [Overview](#overview)
+  - [Description](#description)
+  - [Features](#features)
+  - [Demo](#demo)
+  - [Requirement](#requirement)
+  - [Usage](#usage)
+  - [Install](#install)
+  - [Note](#note)
+  - [Contribution](#contribution)
+  - [Licence](#licence)
+  - [Author](#author)
+
 
 ## Overview
 N1MM2JARL_contestlogツールは、N1MM Logger+が生成するADIFファイルをJARLコンテストログver.2.1のコンテストログを作成するツールです。  
@@ -31,7 +47,11 @@ callsign_score.txt : コンテストの集計結果、バンド別のQSO状況�
 <ins>※：callsing.*のコールサインは、サマリーシート作成作成時に入力したコールサインです。　　
 重要： N1MM logger+で生成したADIFファイル名のコールサインとこのコールサインが異なるとエラーとなります</ins>  
   
-
+## Features
+このツールの機能は、以下のとおりです。
+1. JARLコンテストログv.2.1の提出ログを作成する
+2. コンテストログからQSO状況のスコア資料を作成する。
+3. ターボハムログ用のCSVファイルを作成する。  
 
 ## Demo
 このツールは、
@@ -109,6 +129,8 @@ d)
 一つ目は、実行ファイルn1mm2jarl_TkEasyGUI.exeを任意のフォルダにコピーし、実行することができます。  
 二つ目は、xxx.pyファイルを任意のフォルダにコピーし、python 3.13がインストールされていれば、pythonのインタプリタで実行することができます。  
 
+## Note
+注意点をまとめる
 
 ## Contribution
 
