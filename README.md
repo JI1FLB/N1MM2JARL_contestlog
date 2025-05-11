@@ -1,11 +1,16 @@
 # READMEは現在作成中  
 
 重要なことは、N1MMlogger+でExportされるADIFファイルをpyファイル、exeファイルと同じフォルダに保存して、ツールを起動することです。
+  
+  
+
+---
 
 N1MM2JARL_contestlogツール
+
 ====
 
-# Overview
+## Overview
 
 N1MM2JARL_contestlogツールは、N1MM Logger+が生成するADIFファイルをJARLコンテストログver.2.1のコンテストログを作成するツールです。  
 また、このツールは、提出用コンテストログ作成機能のほか、TurboHamlog用のCSVファイルを作成する機能などを有します。  
@@ -15,6 +20,8 @@ N1MM2JARL_contestlogツールは、N1MM Logger+が生成するADIFファイル�
 !["図2"](/image/2.jpg)
 
 !["図3"](/image/3.jpg)
+
+---
 
 ## Description
 
@@ -30,8 +37,16 @@ callsign_score.txt : コンテストの集計結果、バンド別のQSO状況�
 重要： N1MM logger+で生成したADIFファイル名のコールサインとこのコールサインが異なるとエラーとなります</ins>  
   
 
-
+---
 ## Demo
+このツールは、
+1. N1MMlogger+でExportされるADIFファイルをpyファイル、exeファイルと同じフォルダに保存して、
+2. サマリーシートを作成し、
+3. 提出ログを作成するためのパラメータを設定し、
+4. ログ作成を押すことで、
+コンテストログを作成します。
+
+----
 
 ## Requirement
 
@@ -47,6 +62,7 @@ callsign_score.txt : コンテストの集計結果、バンド別のQSO状況�
    7. os
    8. pickle
 
+----
 
 ## Usage
 
@@ -93,19 +109,23 @@ d)
 (5) "コンテストログ生成"
 この「"コンテストログ生成"」ボタンは、このボタンを押すことで、提出ログ作成する処理を実行します。
 
-
+---
 ## Install
 
 このツールのインストール方法は、2つの方法があります。  
 一つ目は、実行ファイルn1mm2jarl_TkEasyGUI.exeを任意のフォルダにコピーし、実行することができます。  
 二つ目は、xxx.pyファイルを任意のフォルダにコピーし、python 3.13がインストールされていれば、pythonのインタプリタで実行することができます。  
 
+---
 ## Contribution
 
+---
 ## Licence
 
 [MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
 
+---
 ## Author
 
 Seiichi Tanaka JI1FLB
+---
