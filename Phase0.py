@@ -34,7 +34,7 @@ def phase0(Guest, FD_contest, Multi_Op):
 
     summary = open( Callsign + "_summary.txt" ,"w" , encoding='utf-8')
 
-    summary.write( "<SUMMARYSHEET VERSION=R2.0>" + "\n")
+    summary.write( "<SUMMARYSHEET VERSION=R2.1>" + "\n")
 
     fill_in_form.close()
     fill_in_form = open( "form.txt" ,"r", encoding='utf-8')
