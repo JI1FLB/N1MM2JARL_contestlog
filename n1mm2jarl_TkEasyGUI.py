@@ -7,6 +7,7 @@ from Phase3 import phase3
 from summary_parameters import summarysheet2parameters
 from QSO_db_maker_rev2 import QSO_db_maker
 from summary_maker_eg import summary_maker
+# from jarl2txlog import jarl2txlog
 
 
 import subprocess
@@ -20,14 +21,15 @@ layout_contestlog = [
         [eg.Button("サマリーシート作成",key= '-summary_maker-')],
         [eg.Text("")],
         [eg.Button("QSO DB ライブラリ作成",key= '-qso_db-')],
-        [eg.Text("")],
+        [eg.Text("")],     
         [eg.Text("★ログ作成パラメータ")],
         [eg.Text("              "),eg.Text("コールサイン ："),eg.Text( '-Callsign-' )],
         [eg.Text("              "),eg.Text("局 種 係 数 ："),eg.Text( '-FD_coe-' )],
         [eg.Text("              "),eg.Checkbox( 'UTC時刻をJSTに変換',key = '-JST_convert_flag' )],
-        [eg.Text("              "),eg.Checkbox( 'QSLの発行',key = '-QSLyesno' )],
+        [eg.Text("              "),eg.Checkbox( 'QSLを発行',key = '-QSLyesno' )],
         [eg.Text("              "),eg.Checkbox( '1.2Gバンド以上のパワーコード変換 M -> L',key = '-Power_code' )],
-        [eg.Text("              "),eg.Checkbox( 'ALL Asia DX Contest?',key = '-AA_contest' )],
+        [eg.Text("              "),eg.Checkbox( 'ALL Asia DX Contestに参加',key = '-AA_contest' )],
+        [eg.Text("              "),eg.Checkbox( '2TX部門に参加',key = '-Division_2TX' )],       
         [eg.Text("              自局のマルチ   "),eg.Input( key = '-My_Multi' , size = (7,1))],
         [eg.Text("              Hamlog Remark1"),eg.Input( key = '-Remarks1' , size = (50,1))],
         [eg.Text("              "),eg.Button("パラメータ設定", key = '-setup_parameter-' , text_color="red", background_color="lightblue")],
@@ -36,7 +38,7 @@ layout_contestlog = [
         [eg.Text("")],
         [eg.Button("終了", key ="-close_btn-")],
         [eg.Text("")],
-        [eg.Text("サマリーシート作成ツール v.0.1 (c) 2025/05/05 Seiichi Tanaka JI1FLB" , font= ("Times",9))],
+        [eg.Text("サマリーシート作成ツール v.0.2 (c) 2025/05/05 Seiichi Tanaka JI1FLB" , font= ("Times",9))],
 ]
 
 #   ウインドウの作成
@@ -68,7 +70,7 @@ AA_contest: bool = False
 Power_code : bool = False
 JST_convert_flag : bool = False
 QSLyesno : bool = False
-
+Division_2TX : bool = False
 
 def data_clear():
     Remarks1.delete()
@@ -81,6 +83,7 @@ def data_clear():
     Power_code.set(False)
     JST_convert_flag.set(False)
     QSLyesno.set(False)
+    Division_2TX.set(False)
     form_file.set('')
     adif_file.set('')
 
@@ -96,7 +99,7 @@ def log_generate() :
 
 #  Phase1を起動
 #       ADIFファイルのログライン分割を1ラインに修正
-    phase1( Callsign )
+    phase1( Callsign , Division_2TX )
 
 #  Phase2を起動
 #     スコアサマリーの生成、JARLサマリーシートへ得点を転記
@@ -117,6 +120,7 @@ while True :
 
     if e == "-close_btn-" :
         break
+
     if e == "-summary_maker-" :
         # command = ["python","summary_maker_eg.py"]
         # proc = subprocess.Popen(command)
@@ -127,12 +131,17 @@ while True :
         Callsign = parameters[0]
         FD_coe = int( parameters[1] ) 
         win["-Callsign-"].update ( Callsign )
-        win["-FD_coe-"].update ( FD_coe )    
+        win["-FD_coe-"].update ( FD_coe ) 
+
     if e== "-qso_db-" :
         # command = ["python","QSO_db_maker_rev2.py"]
         # proc = subprocess.Popen(command)
         # proc.communicate()
         QSO_db_maker()
+
+    # if e== "-2tx-" :
+    #     jarl2txlog( Callsign )
+
     if e == "-setup_parameter-" :
         parameters = summarysheet2parameters()
         Callsign = parameters[0]
@@ -145,8 +154,11 @@ while True :
         AA_contest = v['-AA_contest']
         My_multi = v["-My_Multi"]
         Remarks1 = v["-Remarks1"]
+        Division_2TX = v["-Division_2TX"]
+
     if e == "-log_create-" :
         log_generate()
+
     if e == None :
         break
 
