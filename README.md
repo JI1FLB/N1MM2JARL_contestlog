@@ -1,14 +1,17 @@
-## READMEは現在作成中  
+
+# N1MM2JARL_contestlogツール (READMEは現在作成中)  
 
 重要なことは、N1MMlogger+でExportされるADIFファイルをpyファイル、exeファイルと同じフォルダに保存して、ツールを起動することです。
-  
-# N1MM2JARL_contestlogツール
+
+## 修正履歴
+2025年10月15日　2TX分門用のログを生成する機能を追加
 
 ---
 
 ## index
 
-- [N1MM2JARL\_contestlogツール](#n1mm2jarl_contestlogツール)
+- [N1MM2JARL\_contestlogツール (READMEは現在作成中)](#n1mm2jarl_contestlogツール-readmeは現在作成中)
+  - [修正履歴](#修正履歴)
   - [index](#index)
   - [Overview](#overview)
   - [Description](#description)
@@ -63,23 +66,21 @@ callsign_score.txt : コンテストの集計結果、バンド別のQSO状況�
 1. N1MMlogger+でExportされるADIFファイルをpyファイル、exeファイルと同じフォルダに保存して、
 2. サマリーシートを作成し、
 3. 提出ログを作成するためのパラメータを設定し、
-4. ログ作成を押すことで、 
-
-コンテストログを作成します。
+4. ログ作成を押すことで、コンテストログを作成します。
 
 ## Requirement
 
 1. python 3.13がインストールされているマシーンであること  
 2. 実行ファイルn1mm2jarl_TkEasyGUI.exeを利用する場合には、実行ファイルがWindows11 x64環境でpyinstallで実行ファイルを作成しているために、Windows X64環境が必要となります。
 3. pythonコンパイラでこのツールを利用する場合には、以下の機能拡張をインストールする必要があります。
-   1. TkEasyGUI
-   2. BeautifulSoup
-   3. sys
-   4. pathlib
-   5. chardet
-   6. datetime
-   7. os
-   8. pickle
+beautifulsoup4==4.14.2
+chardet==5.2.0
+pillow==11.3.0
+pyperclip==1.11.0
+soupsieve==2.8
+TkEasyGUI==1.0.40
+typing_extensions==4.15.0
+pickle
 
 ## Usage
 
@@ -102,7 +103,6 @@ n1mm2jarl_TkEasyGUIを起動します。
    4. サマリーシート作成終了  
    「終了」ボタンを押してください　　
 
-
 (3)　QSO‗DBライブラリ作成  
    このボタンは、N1MM2JARL_contestツールがTurboHamlogのQSL発行可否処理において、過去のQSO状況とコンテストでのQSO状況を比較し、QSLを発行するか否かを判断するために、過去のQSO状況をデータベース化するものです。  
    このN1MM2JARL_contesツールは、QSL発行の可否を、同一局、同一バンド、同一モードで初QSOの場合にQSLを発行すると判断します。このQSO‗DBライブラリ作成は、「ADIFファイル」からcallsign band modeを抽出し、「callsign-band-mode」のデータベースを作成します。ADIFファイルはハムログでも、N1MM logger+のexportしたものでも可能です。  
@@ -122,6 +122,7 @@ n1mm2jarl_TkEasyGUIを起動します。
    3. 「QSLの発行」チェックボックスは、ここをチェックすると、QSL発行条件（バンド、モードで初QSO）の場合に、callsign.csvファイルに”J”を設します。このチェックボックスをチェックしない場合には、一律、”N”を設定します。
    4. 「'1.2Gバンド以上のパワーコード変換 M -> L'」チェックボックスは、N1MMではバンドごとにパワーコードを設定できないために、多分、自局のマルチをMに設定していると思われるので、1.2Gバンド以上のQSOで自局のマルチをMからLへ変換するものです。
    5. 「'ALL Asia DX Contest?'チェックボックスは、オールアジアコンテスト用の提出ログ処理をするためのものです。
+   6. JARL主催２TX部門にした場合には、ログをRun1、Run2ごとにソートして提出する必要があります。このため、この機能は、ADIFファイルをソートして、提出ログを生成します。（2025年10月15日　追加）
 
 (5) コンテストログ生成
    この「"コンテストログ生成"」ボタンは、このボタンを押すことで、提出ログ作成する処理を実行します。

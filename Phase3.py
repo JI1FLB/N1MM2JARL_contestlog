@@ -596,7 +596,7 @@ def phase3( call:str , Contest_name:str, QSLyesno, JST_convert_flag, Power_code,
                     log_sheet.write( line )
                     
                 elif "JADOMESTIC" == Contest_name :
-                    line = QSO_DATE_JARL+" "+TIME_ON_JARL+" "+FREQ_JARL+" "+MODE+" "+CALL+" "+RST_SENT+" "+Multi+" "+RST_RCVD+" "+ APP_N1MM_EXCHANGE1 +"\n"
+                    line = QSO_DATE_JARL+" "+TIME_ON_JARL+" "+FREQ_JARL+" "+MODE+" "+CALL+" "+RST_SENT+" "+Multi+" "+RST_RCVD+" "+ APP_N1MM_EXCHANGE1 + " " + APP_N1MM_POINTS + " " + APP_N1MM_RUN1RUN2 + "\n"
                     log_sheet.write( line )
                     
                 elif "FURUSATO" == Contest_name :
@@ -620,7 +620,7 @@ def phase3( call:str , Contest_name:str, QSLyesno, JST_convert_flag, Power_code,
                     log_sheet.write( line )
                     
                 else :
-                    line = QSO_DATE_JARL+" "+TIME_ON_JARL+" "+FREQ_JARL+" "+MODE+" "+CALL+" "+RST_SENT+" "+Multi+" "+RST_RCVD+" "+ APP_N1MM_EXCHANGE1+"\n"
+                    line = QSO_DATE_JARL+" "+TIME_ON_JARL+" "+FREQ_JARL+" "+MODE+" "+CALL+" "+RST_SENT+" "+Multi+" "+RST_RCVD+" "+ APP_N1MM_EXCHANGE1 + " " + APP_N1MM_POINTS + " " + APP_N1MM_RUN1RUN2 + "\n"
                     log_sheet.write( line )
 
 

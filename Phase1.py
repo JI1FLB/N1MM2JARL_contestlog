@@ -1,6 +1,7 @@
-def phase1( a:str ):
+def phase1( a:str , Divison_2TX ):
     
     import os
+    from jarl2txlog import jarl2txlog
 
     filename = ""
     forming_file = ""
@@ -62,5 +63,12 @@ def phase1( a:str ):
     adi_file.close()
     output_log.close()
 
+
+#------------------------------
+# 2TX部門のログ提出に対応するため、2TX部門を拙宅した場合には、fillinファイルをソートする
+#------------------------------
+
+    if Divison_2TX :
+        jarl2txlog( Callsign )
 
     return

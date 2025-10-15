@@ -287,7 +287,10 @@ def summary_maker():
             f.close()
 
     def create_summary() :
-        summaryoutput = "<SUMMARYSHEET VERSION=R2.1>\n" + "<CONTESTNAME>" + "" + "</CONTESTNAME>\n"+ "<CATEGORYCODE>" +  "" + "</CATEGORYCODE>\n" + "<CALLSIGN>" + "" + "</CALLSIGN>\n" + "<OPCALLSIGN>"+ "" + "</OPCALLSIGN>\n" + "<TOTALSCORE>" + "" + "</TOTALSCORE>\n" + "<ADDRESS>" + "" + "</ADDRESS>\n" + "<NAME>" + "" + "</NAME>\n"+   "<TEL>" + "" + "</TEL>\n"+ "<EMAIL>" + "" + "</EMAIL>\n" +  "<LICENSEDATE>" + "" + "</LICENSEDATE>\n" + "<AGE>" + "" + "</AGE>\n" + "<POWER>" + "" + "</POWER>\n" + "<FDCOEFF>" + "" + "</FDCOEFF>\n"+ "<OPPLACE>" + "" + "</OPPLACE>\n" + "<POWERSUPPLY>" + "" + "</POWERSUPPLY>\n" + "<COMMENTS>" + "" + "</COMMENTS>\n" + "<MULTIOPLIST>" + "" + "</MULTIOPLIST>\n"+ "<REGCLUBNUMBER>" + "" + "</REGCLUBNUMBER>\n" + "<OATH>" + "" +" </OATH>\n" + "<DATE>" + "" + "</DATE>\n" + "<SIGNATURE>" + "" + "</SIGNATURE>\n" + "</SUMMARYSHEET>"
+
+        fillin_oath = "私は、JARL制定のコンテスト規約および電波法令にしたがい運用をした結果、ここに提出するサマリーシートおよびログシートなどが事実と相違ないものであることを、私の名誉において誓います。"
+
+        summaryoutput = "<SUMMARYSHEET VERSION=R2.1>\n" + "<CONTESTNAME>" + "" + "</CONTESTNAME>\n"+ "<CATEGORYCODE>" +  "" + "</CATEGORYCODE>\n" + "<CALLSIGN>" + "" + "</CALLSIGN>\n" + "<OPCALLSIGN>"+ "" + "</OPCALLSIGN>\n" + "<TOTALSCORE>" + "" + "</TOTALSCORE>\n" + "<ADDRESS>" + "" + "</ADDRESS>\n" + "<NAME>" + "" + "</NAME>\n"+   "<TEL>" + "" + "</TEL>\n"+ "<EMAIL>" + "" + "</EMAIL>\n" +  "<LICENSEDATE>" + "" + "</LICENSEDATE>\n" + "<AGE>" + "" + "</AGE>\n" + "<POWER>" + "" + "</POWER>\n" + "<FDCOEFF>" + "" + "</FDCOEFF>\n"+ "<OPPLACE>" + "" + "</OPPLACE>\n" + "<POWERSUPPLY>" + "" + "</POWERSUPPLY>\n" + "<COMMENTS>" + "" + "</COMMENTS>\n" + "<MULTIOPLIST>" + "" + "</MULTIOPLIST>\n"+ "<REGCLUBNUMBER>" + "" + "</REGCLUBNUMBER>\n" + "<OATH>" + fillin_oath +" </OATH>\n" + "<DATE>" + "" + "</DATE>\n" + "<SIGNATURE>" + "" + "</SIGNATURE>\n" + "</SUMMARYSHEET>"
 
         with open( filename , "w+", encoding='UTF-8') as f:
             f.write( summaryoutput )

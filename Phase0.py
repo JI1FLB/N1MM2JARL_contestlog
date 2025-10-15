@@ -32,6 +32,6 @@ def phase0(Guest, FD_contest, Multi_Op):
             Ph0.append(Callsign)
             break
 
-     fill_in_form.close()
+    fill_in_form.close()
     
     return Ph0
