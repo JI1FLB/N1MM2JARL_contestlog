@@ -1,4 +1,10 @@
-def phase3( call:str , Contest_name:str, QSLyesno, JST_convert_flag, Power_code, Multi, AA_contest, Remarks1 ):
+def phase3( call:str , Contest_name:str, QSLyesno, JST_convert_flag, Power_code, Multi, AA_contest, Remarks1, Division_2TX ):
+
+
+#   変更履歴
+#       2025/11/02  2TX部門に参加したときのみRUN1/RUN2を提出ログとして生成
+#
+
 
     import os
     from datetime import datetime
@@ -22,7 +28,6 @@ def phase3( call:str , Contest_name:str, QSLyesno, JST_convert_flag, Power_code,
     t = ""
     dtstr =""
     Multi_temp = ""
-
 
     #------------------------------------------------------------------------
     #
@@ -596,9 +601,14 @@ def phase3( call:str , Contest_name:str, QSLyesno, JST_convert_flag, Power_code,
                     log_sheet.write( line )
                     
                 elif "JADOMESTIC" == Contest_name :
-                    line = QSO_DATE_JARL+" "+TIME_ON_JARL+" "+FREQ_JARL+" "+MODE+" "+CALL+" "+RST_SENT+" "+Multi+" "+RST_RCVD+" "+ APP_N1MM_EXCHANGE1 + " " + APP_N1MM_POINTS + " " + APP_N1MM_RUN1RUN2 + "\n"
-                    log_sheet.write( line )
-                    
+                    if Division_2TX :
+                        line = QSO_DATE_JARL+" "+TIME_ON_JARL+" "+FREQ_JARL+" "+MODE+" "+CALL+" "+RST_SENT+" "+Multi+" "+RST_RCVD+" "+ APP_N1MM_EXCHANGE1 + " " + APP_N1MM_POINTS + " " + APP_N1MM_RUN1RUN2 + "\n"
+                        log_sheet.write( line )
+
+                    if Division_2TX == False :
+                        line = QSO_DATE_JARL+" "+TIME_ON_JARL+" "+FREQ_JARL+" "+MODE+" "+CALL+" "+RST_SENT+" "+Multi+" "+RST_RCVD+" "+ APP_N1MM_EXCHANGE1 + " " + APP_N1MM_POINTS + "\n"
+                        log_sheet.write( line )
+
                 elif "FURUSATO" == Contest_name :
                     line = QSO_DATE_JARL+" "+TIME_ON_JARL+" "+FREQ_JARL+" "+MODE+" "+CALL+" "+RST_SENT+" "+Multi+" "+RST_RCVD+" "+ COMMENT +"\n"
                     log_sheet.write( line )                    
@@ -620,8 +630,13 @@ def phase3( call:str , Contest_name:str, QSLyesno, JST_convert_flag, Power_code,
                     log_sheet.write( line )
                     
                 else :
-                    line = QSO_DATE_JARL+" "+TIME_ON_JARL+" "+FREQ_JARL+" "+MODE+" "+CALL+" "+RST_SENT+" "+Multi+" "+RST_RCVD+" "+ APP_N1MM_EXCHANGE1 + " " + APP_N1MM_POINTS + " " + APP_N1MM_RUN1RUN2 + "\n"
-                    log_sheet.write( line )
+                    if Division_2TX :
+                        line = QSO_DATE_JARL+" "+TIME_ON_JARL+" "+FREQ_JARL+" "+MODE+" "+CALL+" "+RST_SENT+" "+Multi+" "+RST_RCVD+" "+ APP_N1MM_EXCHANGE1 + " " + APP_N1MM_POINTS + " " + APP_N1MM_RUN1RUN2 + "\n"
+                        log_sheet.write( line )
+
+                    if Division_2TX == False :
+                        line = QSO_DATE_JARL+" "+TIME_ON_JARL+" "+FREQ_JARL+" "+MODE+" "+CALL+" "+RST_SENT+" "+Multi+" "+RST_RCVD+" "+ APP_N1MM_EXCHANGE1 + " " + APP_N1MM_POINTS + "\n"
+                        log_sheet.write( line )
 
 
 #--------------------------------------

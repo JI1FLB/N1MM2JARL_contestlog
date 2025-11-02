@@ -112,7 +112,7 @@ def log_generate() :
     Power = Power_code
     AA = AA_contest
     
-    phase3( Callsign , Contest_name, QSL, JST_conv, Power, Multi, AA, Remarks1 )
+    phase3( Callsign , Contest_name, QSL, JST_conv, Power, Multi, AA, Remarks1, Division_2TX )
 
 
 while True :
